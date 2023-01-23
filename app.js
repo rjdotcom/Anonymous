@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
     password: String
 });
 
-userSchema.plugin(encrypt, { secret: process.env.SECRET,encryptedFields:['password'] });
+userSchema.plugin(encrypt, { secret:process.env.SECRET,encryptedFields:['password'] });
 const User = new mongoose.model("User", userSchema);
 
 app.get('/', (req, res) => {
@@ -83,6 +83,6 @@ app.post('/login', function (req, res) {
 });
 
 
-app.listen(3000, function () {
-    console.log('server strated on port 3000.');
+app.listen(8000, function () {
+    console.log('server strated on port 8000.');
 });
