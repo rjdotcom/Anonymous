@@ -6,7 +6,7 @@ const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const encrypt = require('mongoose-encryption');
-
+const port = 3000;
 
 
 const app = express();
@@ -83,6 +83,6 @@ app.post('/login', function (req, res) {
 });
 
 
-app.listen(8000, function () {
-    console.log('server strated on port 8000.');
+app.listen(port, function () {
+    console.log('server strated on port', port);
 });
